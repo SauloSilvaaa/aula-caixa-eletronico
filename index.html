@@ -1,49 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caixa Eletroônico</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caixa Eletrônico</title>
+  <link rel="icon" type="image/png" href="../public/logo.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
 
-    <style>
-        * {
-            border: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .caixa-container {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            height: 100%;
-            align-content: center;
-        }
+    h1 {
+      color: #2c3e50;
+    }
 
-        main {
-            background-color: #8b8b8b;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 500px;
-            height: 400px;
-        }
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-    </style>
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background: #27ae60;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #ecf0f1;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
-    <main>
-            <h1>💰 Caixa Eletrônico</p>
-            <p>Saldo Atual: <span></span>R$ 0,00</p>
-            <input type="number" id="valor" placeholder="Digite o Valor">
-            <div>
-                <button>💵 Depositar</button>
-                <button>🆙Sacar</button>
-            </div>
-            <h2>📜Histórico de Transações</p>
-    </main>
+  <div class="caixa-container">
+    <h1>💰 Caixa Eletrônico</h1>
+    <p>Saldo Atual: <span id="saldo">R$ 0,00</span></p>
+
+    <input type="number" id="valor" placeholder="Digite o valor" />
+    <button onclick="depositar()">💵 Depositar</button>
+    <button onclick="sacar()">🏧 Sacar</button>
+
+    <h2>📜 Histórico de Transações</h2>
+    <ul id="historico-transacoes"></ul>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
