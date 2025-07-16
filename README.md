@@ -5,7 +5,8 @@ Uma aplicação web que simula um caixa eletrônico básico, permitindo operaç�
 <img src="https://i.imgur.com/LOkafEG.gif">
 
 <br>
-## ✨ Recursos
+
+## Recursos ✨
 Saldo Atual: Exibe o saldo disponível na conta.
 
 Depósito: Permite adicionar valor ao saldo.
